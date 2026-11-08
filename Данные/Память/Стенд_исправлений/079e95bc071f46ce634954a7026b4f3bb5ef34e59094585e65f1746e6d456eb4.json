@@ -1,0 +1,7 @@
+{
+  "expression": "(owner == 0 and error != 0)",
+  "reproduce": {
+    "owner": 0,
+    "error": 0
+  }
+}
