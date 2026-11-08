@@ -1,0 +1,1456 @@
+{
+  "name": "Блокнот",
+  "schema_version": 1,
+  "app": "notepad.exe",
+  "test_version": "0.4.21",
+  "agent": {
+    "id": "notepad",
+    "name": "Агент Блокнот",
+    "group": "Агенты навыков"
+  },
+  "functions": [
+    {
+      "menu": "Файл",
+      "name": "Новая вкладка",
+      "enabled": true,
+      "operation": "new_tab",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Файл",
+      "name": "Новое окно",
+      "enabled": true,
+      "operation": "new_window",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Файл",
+      "name": "Новая вкладка Markdown",
+      "enabled": true,
+      "operation": "new_markdown",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Файл",
+      "name": "Открыть",
+      "enabled": true,
+      "operation": "open_file",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Файл",
+      "name": "Что нового",
+      "enabled": true,
+      "operation": null,
+      "status": "skipped",
+      "evidence": "Может открыть внешний ресурс"
+    },
+    {
+      "menu": "Файл",
+      "name": "Сохранить",
+      "enabled": true,
+      "operation": "save_file",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Файл",
+      "name": "Сохранить как",
+      "enabled": true,
+      "operation": "save_copy",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Файл",
+      "name": "Сохранить все",
+      "enabled": true,
+      "operation": "save_all",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Файл",
+      "name": "Параметры страницы",
+      "enabled": true,
+      "operation": "page_surface",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Файл",
+      "name": "Печать",
+      "enabled": true,
+      "operation": null,
+      "status": "skipped",
+      "evidence": "Может отправить задание на принтер"
+    },
+    {
+      "menu": "Файл",
+      "name": "Закрыть вкладку",
+      "enabled": true,
+      "operation": "close_tab",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Файл",
+      "name": "Закрыть окно",
+      "enabled": true,
+      "operation": "close_window",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Файл",
+      "name": "Выйти",
+      "enabled": true,
+      "operation": "exit_app",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Изменить",
+      "name": "Отменить",
+      "enabled": false,
+      "operation": "undo",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Изменить",
+      "name": "Вырезать",
+      "enabled": false,
+      "operation": null,
+      "status": "skipped",
+      "evidence": "Меняет системный буфер обмена"
+    },
+    {
+      "menu": "Изменить",
+      "name": "Копировать",
+      "enabled": false,
+      "operation": null,
+      "status": "skipped",
+      "evidence": "Меняет системный буфер обмена"
+    },
+    {
+      "menu": "Изменить",
+      "name": "Вставить",
+      "enabled": false,
+      "operation": null,
+      "status": "skipped",
+      "evidence": "Может прочитать пользовательский буфер обмена"
+    },
+    {
+      "menu": "Изменить",
+      "name": "Удалить",
+      "enabled": false,
+      "operation": "delete",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Изменить",
+      "name": "Очистить форматирование",
+      "enabled": true,
+      "operation": null,
+      "status": "skipped",
+      "evidence": "Для проверки нужен форматированный Markdown-документ"
+    },
+    {
+      "menu": "Изменить",
+      "name": "Определить с помощью Bing",
+      "enabled": true,
+      "operation": null,
+      "status": "skipped",
+      "evidence": "Может передать выделенный текст в браузер"
+    },
+    {
+      "menu": "Изменить",
+      "name": "Найти",
+      "enabled": true,
+      "operation": "find_text",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Изменить",
+      "name": "Найти далее",
+      "enabled": true,
+      "operation": "find_next",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Изменить",
+      "name": "Найти ранее",
+      "enabled": true,
+      "operation": "find_previous",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Изменить",
+      "name": "Заменить",
+      "enabled": true,
+      "operation": "replace_text",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Изменить",
+      "name": "Перейти",
+      "enabled": true,
+      "operation": "goto_surface",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Изменить",
+      "name": "Выбрать все",
+      "enabled": true,
+      "operation": "select_all",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Изменить",
+      "name": "Время и дата",
+      "enabled": true,
+      "operation": "date",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Изменить",
+      "name": "Шрифт",
+      "enabled": true,
+      "operation": "font_surface",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Просмотр",
+      "name": "Масштаб",
+      "enabled": true,
+      "operation": "surface",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Просмотр",
+      "name": "Строка состояния",
+      "enabled": true,
+      "operation": "status_bar",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Просмотр",
+      "name": "Перенос по словам",
+      "enabled": true,
+      "operation": "word_wrap",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Просмотр",
+      "name": "Markdown",
+      "enabled": false,
+      "operation": "markdown_view",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Просмотр",
+      "submenu": "Масштаб",
+      "name": "Увеличить",
+      "enabled": true,
+      "operation": "zoom_in",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Просмотр",
+      "submenu": "Масштаб",
+      "name": "Уменьшить",
+      "enabled": true,
+      "operation": "zoom_out",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Просмотр",
+      "submenu": "Масштаб",
+      "name": "Восстановить масштаб по умолчанию",
+      "enabled": true,
+      "operation": "zoom_reset",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Следующая вкладка",
+      "shortcut": "Ctrl+Tab",
+      "enabled": true,
+      "operation": "key_tab_next",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Предыдущая вкладка",
+      "shortcut": "Ctrl+Shift+Tab",
+      "enabled": true,
+      "operation": "key_tab_previous",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Восстановить закрытую вкладку",
+      "shortcut": "Ctrl+Shift+T",
+      "enabled": true,
+      "operation": "key_reopen_tab",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Новый документ, определить поведение",
+      "shortcut": "Ctrl+N",
+      "enabled": true,
+      "operation": "key_ctrl_n",
+      "status": "verified",
+      "evidence": "Ctrl+N: новая активная вкладка в исходном окне; исходный пробный файл снова активен."
+    },
+    {
+      "menu": "Тест PDF",
+      "name": "Печать",
+      "shortcut": "Файл → Печать / Ctrl+P (резерв)",
+      "enabled": true,
+      "operation": "print_dialog",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Повторить правку",
+      "shortcut": "Ctrl+Y",
+      "enabled": true,
+      "operation": "key_redo",
+      "status": "verified",
+      "evidence": "Текст редактора сверен. исходный текст восстановлен"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Вырезать",
+      "shortcut": "Ctrl+X",
+      "enabled": true,
+      "operation": "key_cut",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Копировать",
+      "shortcut": "Ctrl+C",
+      "enabled": true,
+      "operation": "key_copy",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Вставить",
+      "shortcut": "Ctrl+V",
+      "enabled": true,
+      "operation": "key_paste",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Удалить символ справа",
+      "shortcut": "Delete",
+      "enabled": true,
+      "operation": "key_delete",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Удалить слово слева",
+      "shortcut": "Ctrl+Backspace",
+      "enabled": true,
+      "operation": "key_delete_left_word",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Удалить слово справа",
+      "shortcut": "Ctrl+Delete",
+      "enabled": true,
+      "operation": "key_delete_right_word",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Начало строки",
+      "shortcut": "Home",
+      "enabled": true,
+      "operation": "key_line_start",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Конец строки",
+      "shortcut": "End",
+      "enabled": true,
+      "operation": "key_line_end",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Начало документа",
+      "shortcut": "Ctrl+Home",
+      "enabled": true,
+      "operation": "key_doc_start",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Конец документа",
+      "shortcut": "Ctrl+End",
+      "enabled": true,
+      "operation": "key_doc_end",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Выделить символ или строку",
+      "shortcut": "Shift+стрелки",
+      "enabled": true,
+      "operation": "key_select_chars_lines",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Выделить слово",
+      "shortcut": "Ctrl+Shift+стрелки",
+      "enabled": true,
+      "operation": "key_select_word",
+      "status": "verified",
+      "evidence": "Подтверждено выделение слова с допустимым пробелом.",
+      "failure_type": "RuntimeError",
+      "initial_failure": "UIA не подтвердил ожидаемое выделение после ^{HOME}^+{RIGHT}.",
+      "recovery": {
+        "source": "memory",
+        "profile": "accept_word_separator",
+        "status": "verified"
+      },
+      "recovery_attempts": [
+        {
+          "source": "memory",
+          "profile": "accept_word_separator",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Выделить до края строки",
+      "shortcut": "Shift+Home / End",
+      "enabled": true,
+      "operation": "key_select_line_edges",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Выделить до края документа",
+      "shortcut": "Ctrl+Shift+Home / End",
+      "enabled": true,
+      "operation": "key_select_doc_edges",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Перейти к строке",
+      "shortcut": "Ctrl+G / меню «Правка» (резерв)",
+      "enabled": true,
+      "operation": "key_goto_line",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Клавиатура",
+      "name": "Вставить как обычный текст",
+      "shortcut": "Ctrl+Shift+V (кандидат)",
+      "enabled": true,
+      "operation": "key_paste_plain",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Параметры поиска",
+      "name": "Искать с учётом регистра",
+      "shortcut": "Параметры панели поиска, если доступны",
+      "enabled": true,
+      "operation": "find_case",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    },
+    {
+      "menu": "Параметры поиска",
+      "name": "Продолжать поиск с начала или конца документа",
+      "shortcut": "Параметры панели поиска, если доступны",
+      "enabled": true,
+      "operation": "find_wrap",
+      "status": "not_run",
+      "evidence": "Действие вне выбранного прогона"
+    }
+  ],
+  "command_manifest": [
+    {
+      "number": 1,
+      "name": "Новая вкладка",
+      "shortcut_or_route": "Ctrl+T",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 2,
+      "name": "Закрыть текущую вкладку",
+      "shortcut_or_route": "Ctrl+W",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 3,
+      "name": "Новое окно",
+      "shortcut_or_route": "Ctrl+Shift+N",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 4,
+      "name": "Следующая вкладка",
+      "shortcut_or_route": "Ctrl+Tab",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 5,
+      "name": "Предыдущая вкладка",
+      "shortcut_or_route": "Ctrl+Shift+Tab",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 6,
+      "name": "Восстановить закрытую вкладку",
+      "shortcut_or_route": "Ctrl+Shift+T",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 7,
+      "name": "Новый документ, определить поведение",
+      "shortcut_or_route": "Ctrl+N",
+      "status": "verified",
+      "checked_via": "shortcut",
+      "evidence": "Ctrl+N: новая активная вкладка в исходном окне; исходный пробный файл снова активен.",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 8,
+      "name": "Открыть файл",
+      "shortcut_or_route": "Ctrl+O",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 9,
+      "name": "Сохранить",
+      "shortcut_or_route": "Ctrl+S",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 10,
+      "name": "Сохранить как",
+      "shortcut_or_route": "F12 / Ctrl+Shift+S",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 11,
+      "name": "Печать",
+      "shortcut_or_route": "Файл → Печать / Ctrl+P (резерв)",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 12,
+      "name": "Закрыть окно",
+      "shortcut_or_route": "Alt+F4",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 13,
+      "name": "Отменить правку",
+      "shortcut_or_route": "Ctrl+Z",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 14,
+      "name": "Повторить правку",
+      "shortcut_or_route": "Ctrl+Y",
+      "status": "verified",
+      "checked_via": "shortcut",
+      "evidence": "Текст редактора сверен. исходный текст восстановлен",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 15,
+      "name": "Вырезать",
+      "shortcut_or_route": "Ctrl+X",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 16,
+      "name": "Копировать",
+      "shortcut_or_route": "Ctrl+C",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 17,
+      "name": "Вставить",
+      "shortcut_or_route": "Ctrl+V",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 18,
+      "name": "Выделить весь текст",
+      "shortcut_or_route": "Ctrl+A",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 19,
+      "name": "Удалить символ справа",
+      "shortcut_or_route": "Delete",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 20,
+      "name": "Удалить слово слева",
+      "shortcut_or_route": "Ctrl+Backspace",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 21,
+      "name": "Удалить слово справа",
+      "shortcut_or_route": "Ctrl+Delete",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 22,
+      "name": "Вставить дату и время",
+      "shortcut_or_route": "F5",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 23,
+      "name": "Начало строки",
+      "shortcut_or_route": "Home",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 24,
+      "name": "Конец строки",
+      "shortcut_or_route": "End",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 25,
+      "name": "Начало документа",
+      "shortcut_or_route": "Ctrl+Home",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 26,
+      "name": "Конец документа",
+      "shortcut_or_route": "Ctrl+End",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 27,
+      "name": "Выделить символ или строку",
+      "shortcut_or_route": "Shift+стрелки",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 28,
+      "name": "Выделить слово",
+      "shortcut_or_route": "Ctrl+Shift+стрелки",
+      "status": "verified",
+      "checked_via": "shortcut",
+      "evidence": "Подтверждено выделение слова с допустимым пробелом.",
+      "recovery": {
+        "source": "memory",
+        "profile": "accept_word_separator",
+        "status": "verified"
+      },
+      "diagnosis": null,
+      "initial_failure": "UIA не подтвердил ожидаемое выделение после ^{HOME}^+{RIGHT}."
+    },
+    {
+      "number": 29,
+      "name": "Выделить до края строки",
+      "shortcut_or_route": "Shift+Home / End",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 30,
+      "name": "Выделить до края документа",
+      "shortcut_or_route": "Ctrl+Shift+Home / End",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 31,
+      "name": "Поиск",
+      "shortcut_or_route": "Ctrl+F",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 32,
+      "name": "Найти далее",
+      "shortcut_or_route": "F3",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 33,
+      "name": "Найти ранее",
+      "shortcut_or_route": "Shift+F3",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 34,
+      "name": "Найти и заменить",
+      "shortcut_or_route": "Ctrl+H",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 35,
+      "name": "Перейти к строке",
+      "shortcut_or_route": "Ctrl+G / меню «Правка» (резерв)",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 36,
+      "name": "Увеличить масштаб",
+      "shortcut_or_route": "Ctrl++",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 37,
+      "name": "Уменьшить масштаб",
+      "shortcut_or_route": "Ctrl+-",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 38,
+      "name": "Сбросить масштаб",
+      "shortcut_or_route": "Ctrl+0",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 39,
+      "name": "Перенос по словам",
+      "shortcut_or_route": "Просмотр / Alt+Z (кандидат)",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 40,
+      "name": "Шрифт: семейство и размер",
+      "shortcut_or_route": "Параметры",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 41,
+      "name": "Переместить вкладку",
+      "shortcut_or_route": "Alt+Shift+стрелки (кандидат)",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 42,
+      "name": "Вынести вкладку в отдельное окно",
+      "shortcut_or_route": "Перетаскивание",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 43,
+      "name": "Восстановить сессию с несохранённым текстом",
+      "shortcut_or_route": "Параметры сессии",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 44,
+      "name": "Вставить как обычный текст",
+      "shortcut_or_route": "Ctrl+Shift+V (кандидат)",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 45,
+      "name": "Перефразировать текст",
+      "shortcut_or_route": "Ctrl+D / Rewrite (если доступно)",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 46,
+      "name": "Настроить длину и тон Rewrite",
+      "shortcut_or_route": "Rewrite (если доступно)",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 47,
+      "name": "Генерация текста и суммаризация",
+      "shortcut_or_route": "Write / Summarize (если доступны)",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 48,
+      "name": "Строка состояния",
+      "shortcut_or_route": "Просмотр",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 49,
+      "name": "Символы, строки и кодировка",
+      "shortcut_or_route": "Строка состояния",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 50,
+      "name": "Масштаб колесом",
+      "shortcut_or_route": "Ctrl+колесо",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 51,
+      "name": "Светлая, тёмная и системная тема",
+      "shortcut_or_route": "Параметры",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 52,
+      "name": "Направление справа налево",
+      "shortcut_or_route": "Right Ctrl+Right Shift (кандидат)",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 53,
+      "name": "Направление слева направо",
+      "shortcut_or_route": "Left Ctrl+Left Shift (кандидат)",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 54,
+      "name": "Сохранить в ANSI",
+      "shortcut_or_route": "Сохранить как → Кодировка",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 55,
+      "name": "Сохранить в UTF-8",
+      "shortcut_or_route": "Сохранить как → Кодировка",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 56,
+      "name": "Сохранить в UTF-8 с BOM",
+      "shortcut_or_route": "Сохранить как → Кодировка",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 57,
+      "name": "Сохранить в UTF-16 LE",
+      "shortcut_or_route": "Сохранить как → Кодировка",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 58,
+      "name": "Сохранить в UTF-16 BE",
+      "shortcut_or_route": "Сохранить как → Кодировка",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 59,
+      "name": "Создать вкладку Markdown",
+      "shortcut_or_route": "Файл",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 60,
+      "name": "Переключить вид Markdown",
+      "shortcut_or_route": "Просмотр / строка состояния",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 61,
+      "name": "Заголовки и основной текст",
+      "shortcut_or_route": "Панель Markdown",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 62,
+      "name": "Списки, включая вложенные",
+      "shortcut_or_route": "Панель Markdown",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 63,
+      "name": "Жирный текст",
+      "shortcut_or_route": "Панель Markdown",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 64,
+      "name": "Курсив",
+      "shortcut_or_route": "Панель Markdown",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 65,
+      "name": "Зачёркивание",
+      "shortcut_or_route": "Панель Markdown",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 66,
+      "name": "Вставить ссылку",
+      "shortcut_or_route": "Панель Markdown",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 67,
+      "name": "Вставить таблицу и менять строки / столбцы",
+      "shortcut_or_route": "Панель Markdown",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 68,
+      "name": "Очистить форматирование",
+      "shortcut_or_route": "Панель Markdown",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 69,
+      "name": "Сохранить всё",
+      "shortcut_or_route": "Файл",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 70,
+      "name": "Настроить параметры страницы",
+      "shortcut_or_route": "Файл",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 71,
+      "name": "Удалить выделение",
+      "shortcut_or_route": "Изменить",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 72,
+      "name": "Что нового",
+      "shortcut_or_route": "Файл",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 73,
+      "name": "Поиск через Bing",
+      "shortcut_or_route": "Изменить",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 74,
+      "name": "Выйти из Блокнота",
+      "shortcut_or_route": "Файл",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 75,
+      "name": "Показать варианты исправления слова",
+      "shortcut_or_route": "Контекстное меню / Shift+F10",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 76,
+      "name": "Пропустить слово в документе",
+      "shortcut_or_route": "Контекстное меню проверки правописания",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 77,
+      "name": "Добавить слово в словарь",
+      "shortcut_or_route": "Контекстное меню проверки правописания",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 78,
+      "name": "Включить проверку правописания",
+      "shortcut_or_route": "Параметры",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 79,
+      "name": "Выбрать типы файлов для проверки правописания",
+      "shortcut_or_route": "Параметры",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 80,
+      "name": "Включить или выключить автозамену опечаток",
+      "shortcut_or_route": "Параметры",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 81,
+      "name": "Включить или выключить поддержку форматирования",
+      "shortcut_or_route": "Параметры",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 82,
+      "name": "Увеличить отступ элемента списка",
+      "shortcut_or_route": "Панель Markdown",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": null,
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 83,
+      "name": "Искать с учётом регистра",
+      "shortcut_or_route": "Параметры панели поиска, если доступны",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    },
+    {
+      "number": 84,
+      "name": "Продолжать поиск с начала или конца документа",
+      "shortcut_or_route": "Параметры панели поиска, если доступны",
+      "status": "not_run",
+      "checked_via": null,
+      "evidence": "Действие вне выбранного прогона",
+      "recovery": null,
+      "diagnosis": null,
+      "initial_failure": null
+    }
+  ]
+}
